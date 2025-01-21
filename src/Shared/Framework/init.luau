@@ -27,7 +27,17 @@ end)({
             local success, response = pcall(RunService[`Is{module.Name}`], RunService);
 
             if (success and response) then
-                return require(module)();
+                success, response = pcall(require, module);
+
+                if (success and response) then
+                    success, response = pcall(response);
+                    if not success then
+                        warn(response);
+                        task.delay(0.1, self.resolve, self);
+                    end;
+                else
+                    warn(response);
+                end
             end;
         end;
     end;
