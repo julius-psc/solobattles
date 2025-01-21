@@ -4,7 +4,7 @@ return setmetatable({
     ,Description = "A collection of tools for Roblox Lua"
     ,Author = "blacksmith"
     ,Settings = {
-        3["MP5"] = {
+        ["MP5"] = {
             ["Damage"] = 20
             ,["FireRate"] = 0.1
             ,["Range"] = 100
