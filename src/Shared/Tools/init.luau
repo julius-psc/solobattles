@@ -11,6 +11,7 @@ return setmetatable({
             ,["Accuracy"] = 0.1
         }
     }
+    ,Dependencies = {}
 }, (function(self)
     self.__index = self;
     return self;
@@ -19,6 +20,6 @@ end)({
         local Setting = self.Settings[name];
         Setting.Module = require(script:FindFirstChild(name) or script:WaitForChild(name));
 
-        return Setting.Module(Setting);
-    end
+        return Setting.Module(self, Setting);
+    end,
 }));
