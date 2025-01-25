@@ -9,6 +9,9 @@ return setmetatable({
             ,["FireRate"] = 0.1
             ,["Range"] = 100
             ,["Accuracy"] = 0.1
+            ,["MaxAmmo"] = 30
+            ,["CurrentAmmo"] = 30
+            ,["ReserveAmmo"] = 120
         }
     }
     ,Dependencies = {}
